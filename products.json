@@ -1,16 +1,5 @@
 [
   {
-    "id": "teak-sofa-01",
-    "name": "Teak Wood Sofa",
-    "price": "₹18,000",
-    "category": "Sofa",
-    "description": "Premium teak wood sofa with cushioned seating.",
-    "whatsapp": "919876543210",
-    "images": [
-      "images/teak-sofa-01-1.jpg"
-    ]
-  },
-  {
     "id": "king-bed-02",
     "name": "King Size Bed",
     "price": "₹25,000",
@@ -19,17 +8,6 @@
     "whatsapp": "919876543210",
     "images": [
       "images/king-bed-02-1.jpg"
-    ]
-  },
-  {
-    "id": "take-sofa",
-    "name": "Thek sofa",
-    "price": "13300",
-    "category": "sofa",
-    "description": "",
-    "whatsapp": "+91 9876543210",
-    "images": [
-      "images/take-sofa-1.png"
     ]
   }
 ]
