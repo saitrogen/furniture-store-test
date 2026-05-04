@@ -1,0 +1,13 @@
+[
+  {
+    "id": "king-bed-02",
+    "name": "King Size Bed",
+    "price": "₹25,000",
+    "category": "Bed",
+    "description": "Solid wood king size bed with storage.",
+    "whatsapp": "919876543210",
+    "images": [
+      "images/king-bed-02-1.jpg"
+    ]
+  }
+]

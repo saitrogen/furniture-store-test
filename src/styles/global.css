@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(45, 45, 45);
+}
+
+body {
+  background-color: rgb(245, 240, 235);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Utility Classes */
+.container-max {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-brand text-white rounded transition-colors duration-200 hover:opacity-90;
+}
+
+.btn-success {
+  @apply px-4 py-2 bg-green-600 text-white rounded transition-colors duration-200 hover:opacity-90;
+}
+
+.btn-sm {
+  @apply px-3 py-1 text-sm;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
