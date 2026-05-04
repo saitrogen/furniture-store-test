@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery';
+import ProductSpecs from '../../components/ProductSpecs';
+import RelatedProducts from '../../components/RelatedProducts';
+import { loadProducts, getUniqCategories } from '../../lib/products';
+import { getProductById, getAllProductIds } from '../../lib/product-details';
+
+export async function getStaticPaths() {
+  const products = await loadProducts();
+  const ids = getAllProductIds(products);
+
+  return ids.map(id => ({
+    params: { id },
+  }));
+}
+
+const { id } = Astro.params;
+const products = await loadProducts();
+const product = getProductById(products, id);
+
+if (!product) {
+  return Astro.redirect('/');
+}
+
+const whatsappMessage = `Hi, I'm interested in the ${product.name} (₹${product.price}). Could you provide more details?`;
+const whatsappLink = `https://wa.me/${product.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`;
+---
+
+<Layout title={product.name}>
+  <div class="py-12">
+    {/* Back Link */}
+    <a href="/" class="inline-flex items-center gap-2 text-sm text-tertiary hover:text-primary-dark transition-colors mb-8 font-medium">
+      ← Back to Store
+    </a>
+
+    {/* Product Detail Section */}
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+      {/* Left: Gallery */}
+      <div class="lg:col-span-3">
+        <ProductGallery
+          client:load
+          images={product.images}
+          productName={product.name}
+          imageBase=""
+        />
+      </div>
+
+      {/* Right: Product Info */}
+      <div class="lg:col-span-2 flex flex-col gap-8">
+        {/* Header Info */}
+        <div>
+          <span class="inline-block text-xs font-semibold text-primary-dark mb-3 opacity-75 uppercase tracking-wide bg-surface-light px-3 py-1.5 rounded-full">
+            {product.category}
+          </span>
+
+          <h1 class="text-3xl font-bold text-text-primary mb-4">{product.name}</h1>
+
+          <div class="flex items-baseline gap-3 mb-6">
+            <span class="text-4xl font-bold text-accent">₹{product.price}</span>
+            <span class="text-sm text-text-muted">Direct from seller</span>
+          </div>
+
+          <p class="text-base text-text-secondary leading-relaxed mb-6">
+            {product.description}
+          </p>
+        </div>
+
+        {/* Specs */}
+        <ProductSpecs client:load product={product} />
+
+        {/* WhatsApp CTA */}
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 w-full px-6 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 text-base"
+        >
+          💬 Inquire via WhatsApp
+        </a>
+
+        {/* Info Box */}
+        <div class="p-4 bg-surface-light rounded-lg border border-border-light">
+          <p class="text-xs text-text-muted uppercase tracking-wide font-semibold mb-2">WhatsApp Support</p>
+          <p class="text-sm text-text-secondary">
+            Click above to chat directly with the seller on WhatsApp for instant responses.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Related Products */}
+    <RelatedProducts
+      client:load
+      currentProduct={product}
+      allProducts={products}
+      imageBase=""
+    />
+  </div>
+</Layout>
+
+<style>
+  :global(body) {
+    background-color: #fff8f5;
+  }
+</style>

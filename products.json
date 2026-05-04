@@ -1,13 +1,281 @@
 [
   {
-    "id": "king-bed-02",
-    "name": "King Size Bed",
-    "price": "₹25,000",
+    "id": "king-bed-01",
+    "name": "Solid Oak King Bed",
+    "price": "₹45,000",
     "category": "Bed",
-    "description": "Solid wood king size bed with storage.",
+    "description": "Premium solid oak king size bed with hand-carved details and storage compartments.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "queen-bed-01",
+    "name": "Queen Platform Bed",
+    "price": "₹32,000",
+    "category": "Bed",
+    "description": "Modern minimalist queen bed with low profile frame and built-in storage. Perfect for contemporary spaces.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "single-bed-01",
+    "name": "Single Steel Bed",
+    "price": "₹15,000",
+    "category": "Bed",
+    "description": "Sturdy steel single bed with powder coating. Ideal for hostels and student rooms.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "sofa-01",
+    "name": "Nordic Velvet Cloud Sofa",
+    "price": "₹58,000",
+    "category": "Sofa",
+    "description": "Ultra-comfortable premium velvet sofa with ergonomic support and solid wood frame. Perfect for modern living.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "sofa-02",
+    "name": "Sectional L-Shape Sofa",
+    "price": "₹72,000",
+    "category": "Sofa",
+    "description": "Large L-shaped sectional sofa with reversible cushions. Seats 5-6 people comfortably.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "sofa-03",
+    "name": "Compact 2-Seater Sofa",
+    "price": "₹28,000",
+    "category": "Sofa",
+    "description": "Space-saving 2-seater sofa in grey linen. Great for apartments and small living rooms.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "dining-table-01",
+    "name": "Walnut Dining Table",
+    "price": "₹35,000",
+    "category": "Table",
+    "description": "6-seater dining table in solid walnut wood with hand-polished finish. Seats up to 6 people.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "dining-table-02",
+    "name": "Glass Top Dining Table",
+    "price": "₹42,000",
+    "category": "Table",
+    "description": "Modern 4-seater dining table with sleek glass top and chrome base. Contemporary design.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "coffee-table-01",
+    "name": "Marble Coffee Table",
+    "price": "₹18,000",
+    "category": "Table",
+    "description": "Elegant coffee table with white marble top and wooden base. Perfect for any living room.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "coffee-table-02",
+    "name": "Multi-Level Coffee Table",
+    "price": "₹12,000",
+    "category": "Table",
+    "description": "Industrial style multi-level coffee table with storage. Makes a statement piece.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "chair-01",
+    "name": "Modern Accent Chair",
+    "price": "₹22,000",
+    "category": "Chair",
+    "description": "Contemporary accent chair in mustard yellow fabric. Adds color and comfort to any room.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "chair-02",
+    "name": "Office Executive Chair",
+    "price": "₹16,000",
+    "category": "Chair",
+    "description": "Premium office chair with ergonomic back support and adjustable height. Perfect for working.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "chair-03",
+    "name": "Wooden Dining Chair",
+    "price": "₹8,500",
+    "category": "Chair",
+    "description": "Classic wooden dining chair made from solid oak. Pack of 2. Timeless design.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "chair-04",
+    "name": "Lounge Rocking Chair",
+    "price": "₹19,000",
+    "category": "Chair",
+    "description": "Comfortable rocking chair upholstered in soft fabric. Perfect for relaxation.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "cabinet-01",
+    "name": "Wooden Storage Cabinet",
+    "price": "₹38,000",
+    "category": "Cabinet",
+    "description": "Spacious wooden storage cabinet with shelves and doors. Solid teak wood construction.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "cabinet-02",
+    "name": "Modern Kitchen Cabinet",
+    "price": "₹52,000",
+    "category": "Cabinet",
+    "description": "Sleek modern kitchen cabinet with soft-close doors and multiple compartments.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "cabinet-03",
+    "name": "Compact Shoe Rack Cabinet",
+    "price": "₹9,000",
+    "category": "Cabinet",
+    "description": "Space-saving shoe rack cabinet that holds 15+ pairs. Fits in any hallway.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "bookshelf-01",
+    "name": "Tall Wooden Bookshelf",
+    "price": "₹25,000",
+    "category": "Shelf",
+    "description": "5-tier wooden bookshelf. Sturdy construction holds up to 200kg total weight.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "bookshelf-02",
+    "name": "Metal & Glass Display Shelf",
+    "price": "₹16,000",
+    "category": "Shelf",
+    "description": "Modern display shelf with metal frame and glass shelves. Perfect for collectibles.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "desk-01",
+    "name": "Home Office Desk",
+    "price": "₹22,000",
+    "category": "Desk",
+    "description": "Sturdy home office desk with spacious work surface and cable management. Adjustable height.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "desk-02",
+    "name": "Gaming Computer Desk",
+    "price": "₹31,000",
+    "category": "Desk",
+    "description": "High-performance gaming desk with RGB lighting and multiple monitor arm positions.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "tv-stand-01",
+    "name": "Modern TV Stand",
+    "price": "₹14,000",
+    "category": "Stand",
+    "description": "Contemporary TV stand fits screens up to 65 inches. Storage for media devices.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "tv-stand-02",
+    "name": "Floating Wall-Mounted TV Stand",
+    "price": "₹18,000",
+    "category": "Stand",
+    "description": "Sleek floating TV stand saves floor space. Holds up to 50kg weight.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "wardrobe-01",
+    "name": "3-Door Wooden Wardrobe",
+    "price": "₹65,000",
+    "category": "Wardrobe",
+    "description": "Spacious 3-door wardrobe with mirror and compartments. Solid wood construction.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "wardrobe-02",
+    "name": "Sliding Door Wardrobe",
+    "price": "₹55,000",
+    "category": "Wardrobe",
+    "description": "Modern sliding door wardrobe saves space. 2 doors with internal organization.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "nightstand-01",
+    "name": "Wooden Nightstand",
+    "price": "₹11,000",
+    "category": "Nightstand",
+    "description": "Simple wooden nightstand with drawer and open shelf. Fits any bedroom.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "nightstand-02",
+    "name": "Modern Glass Nightstand",
+    "price": "₹13,500",
+    "category": "Nightstand",
+    "description": "Contemporary nightstand with tempered glass shelves and metal frame.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "mirror-01",
+    "name": "Large Standing Mirror",
+    "price": "₹8,000",
+    "category": "Mirror",
+    "description": "Full-body standing mirror with wooden frame. Perfect for dressing rooms.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "mirror-02",
+    "name": "Decorative Wall Mirror",
+    "price": "₹5,500",
+    "category": "Mirror",
+    "description": "Decorative wall mirror with ornate frame. Adds elegance to any wall.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "stool-01",
+    "name": "Bar Height Stool",
+    "price": "₹6,500",
+    "category": "Stool",
+    "description": "Adjustable bar height stool with footrest. Upholstered in durable fabric.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
+  },
+  {
+    "id": "stool-02",
+    "name": "Wooden Dining Stool",
+    "price": "₹4,500",
+    "category": "Stool",
+    "description": "Classic wooden dining stool. Set of 2. Goes well with any table.",
+    "whatsapp": "919876543210",
+    "images": ["images/king-bed-02-1.jpg"]
   }
 ]

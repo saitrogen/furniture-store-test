@@ -70,11 +70,10 @@ export default function ProductGallery({ images, productName, imageBase = '' }: 
             <button
               key={index}
               onClick={() => handleThumbnailClick(index)}
-              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
-                index === currentIndex
+              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 ${index === currentIndex
                   ? 'border-primary-dark ring-2 ring-primary-dark'
                   : 'border-border-light hover:border-border'
-              }`}
+                }`}
               aria-label={`View image ${index + 1}`}
             >
               <img
