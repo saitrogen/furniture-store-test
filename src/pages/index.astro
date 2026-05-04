@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductGrid from '../components/ProductGrid';
+import { loadProducts, getUniqCategories } from '../lib/products';
+
+const products = await loadProducts();
+const categories = getUniqCategories(products);
+
+// GitHub raw URL for images (adjust based on your repo setup)
+const imageBase = '';
+---
+
+<Layout title="Furniture Store">
+  <ProductGrid client:load products={products} categories={categories} imageBase={imageBase} />
+</Layout>
