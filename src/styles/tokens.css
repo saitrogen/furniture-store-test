@@ -1,0 +1,166 @@
+/* ============================================================
+   WARM EDITORIAL — Furniture Store Design Tokens
+   Art direction: tactile, artisan furniture → warm serif editorial
+   Palette: stone beige surfaces, walnut brown primary, terracotta accent
+   Typography: Playfair Display (display) + General Sans (body)
+   Density: spacious — furniture is aspirational, not transactional
+   ============================================================ */
+
+:root, [data-theme="light"] {
+  /* Surfaces — warm stone */
+  --color-bg:               #f7f3ee;
+  --color-surface:          #faf8f5;
+  --color-surface-2:        #ffffff;
+  --color-surface-offset:   #f0ebe4;
+  --color-surface-offset-2: #e8e1d8;
+  --color-surface-dynamic:  #dfd7cc;
+  --color-divider:          #d8d0c6;
+  --color-border:           #ccc4b8;
+
+  /* Text */
+  --color-text:             #1e1a14;
+  --color-text-muted:       #6b6358;
+  --color-text-faint:       #a89f93;
+  --color-text-inverse:     #faf8f5;
+
+  /* Primary — walnut brown */
+  --color-primary:          #3b2a1a;
+  --color-primary-hover:    #2c1f12;
+  --color-primary-active:   #1e140c;
+  --color-primary-highlight:#e2d5c8;
+
+  /* Accent — terracotta */
+  --color-accent:           #b85c38;
+  --color-accent-hover:     #9a4a2c;
+  --color-accent-active:    #7c3920;
+  --color-accent-highlight: #f0ddd5;
+
+  /* WhatsApp green */
+  --color-wa:               #25D366;
+  --color-wa-hover:         #1da851;
+
+  /* Semantic */
+  --color-success:          #3a6b2a;
+  --color-success-bg:       #d4edcc;
+  --color-error:            #8b2020;
+  --color-error-bg:         #fce8e8;
+  --color-info-bg:          #fef9ec;
+  --color-warning:          #7a5500;
+
+  /* Radius */
+  --radius-sm:  0.25rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  0.875rem;
+  --radius-xl:  1.25rem;
+  --radius-full:9999px;
+
+  /* Type scale */
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Shadows — warm-tinted */
+  --shadow-sm: 0 1px 3px oklch(0.18 0.03 60 / 0.07);
+  --shadow-md: 0 4px 14px oklch(0.18 0.03 60 / 0.10);
+  --shadow-lg: 0 12px 36px oklch(0.18 0.03 60 / 0.14);
+
+  /* Content widths */
+  --content-narrow:  640px;
+  --content-default: 960px;
+  --content-wide:   1200px;
+
+  /* Transitions */
+  --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'General Sans', 'Inter', system-ui, sans-serif;
+}
+
+[data-theme="dark"] {
+  --color-bg:               #18150f;
+  --color-surface:          #1e1a13;
+  --color-surface-2:        #242018;
+  --color-surface-offset:   #201c15;
+  --color-surface-offset-2: #272218;
+  --color-surface-dynamic:  #312c22;
+  --color-divider:          #2d2820;
+  --color-border:           #3d3829;
+  --color-text:             #e8e0d4;
+  --color-text-muted:       #a0967f;
+  --color-text-faint:       #615a4e;
+  --color-text-inverse:     #1e1a14;
+  --color-primary:          #c4a882;
+  --color-primary-hover:    #d4bfa0;
+  --color-primary-active:   #e2d4be;
+  --color-primary-highlight:#2e2519;
+  --color-accent:           #d4795a;
+  --color-accent-hover:     #e08c70;
+  --color-accent-active:    #eba086;
+  --color-accent-highlight: #3a2318;
+  --color-wa:               #25D366;
+  --color-wa-hover:         #2fe575;
+  --color-success:          #5a9e45;
+  --color-success-bg:       #1e3018;
+  --color-error:            #e06060;
+  --color-error-bg:         #301818;
+  --color-info-bg:          #2a2410;
+  --color-warning:          #d4a030;
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
+  --shadow-md: 0 4px 14px oklch(0 0 0 / 0.35);
+  --shadow-lg: 0 12px 36px oklch(0 0 0 / 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg:               #18150f;
+    --color-surface:          #1e1a13;
+    --color-surface-2:        #242018;
+    --color-surface-offset:   #201c15;
+    --color-surface-offset-2: #272218;
+    --color-surface-dynamic:  #312c22;
+    --color-divider:          #2d2820;
+    --color-border:           #3d3829;
+    --color-text:             #e8e0d4;
+    --color-text-muted:       #a0967f;
+    --color-text-faint:       #615a4e;
+    --color-text-inverse:     #1e1a14;
+    --color-primary:          #c4a882;
+    --color-primary-hover:    #d4bfa0;
+    --color-primary-active:   #e2d4be;
+    --color-primary-highlight:#2e2519;
+    --color-accent:           #d4795a;
+    --color-accent-hover:     #e08c70;
+    --color-accent-active:    #eba086;
+    --color-accent-highlight: #3a2318;
+    --color-wa:               #25D366;
+    --color-wa-hover:         #2fe575;
+    --color-success:          #5a9e45;
+    --color-success-bg:       #1e3018;
+    --color-error:            #e06060;
+    --color-error-bg:         #301818;
+    --color-info-bg:          #2a2410;
+    --color-warning:          #d4a030;
+    --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
+    --shadow-md: 0 4px 14px oklch(0 0 0 / 0.35);
+    --shadow-lg: 0 12px 36px oklch(0 0 0 / 0.45);
+  }
+}
