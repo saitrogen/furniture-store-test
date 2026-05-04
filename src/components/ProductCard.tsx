@@ -16,18 +16,18 @@ export default function ProductCard({ product, imageBase = '' }: ProductCardProp
       <ImageSlider images={product.images} name={product.name} imageBase={imageBase} />
 
       {/* Card Content */}
-      <div className="p-4">
-        <span className="inline-block text-xs font-semibold text-brand mb-2 opacity-75">
+      <div className="p-5 flex flex-col flex-grow">
+        <span className="inline-block text-xs font-semibold text-primary-dark mb-2 opacity-75 uppercase tracking-wide">
           {product.category}
         </span>
 
-        <h3 className="text-lg font-semibold text-text-primary mb-2 line-clamp-2">
+        <h3 className="text-base font-bold text-text-primary mb-2 line-clamp-2 leading-tight">
           {product.name}
         </h3>
 
-        <p className="text-accent font-bold text-lg mb-2">{product.price}</p>
+        <p className="text-accent font-bold text-lg mb-3">₹{product.price}</p>
 
-        <p className="text-sm text-text-muted mb-4 line-clamp-2">
+        <p className="text-sm text-text-secondary mb-4 line-clamp-2 flex-grow">
           {product.description}
         </p>
 
@@ -35,7 +35,7 @@ export default function ProductCard({ product, imageBase = '' }: ProductCardProp
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block w-full text-center btn-success btn-sm bg-green-600 hover:bg-green-700"
+          className="inline-block w-full text-center px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-all duration-200 text-sm"
         >
           Ask on WhatsApp
         </a>
@@ -72,12 +72,12 @@ function ImageSlider({ images, name, imageBase = '' }: ImageSliderProps) {
   };
 
   return (
-    <div className="relative bg-gray-200 aspect-video flex items-center justify-center overflow-hidden">
+    <div className="relative bg-surface-light aspect-video flex items-center justify-center overflow-hidden group">
       {/* Image */}
       <img
         src={imageUrl}
         alt={name}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         loading="lazy"
       />
 
@@ -85,7 +85,7 @@ function ImageSlider({ images, name, imageBase = '' }: ImageSliderProps) {
       {images.length > 1 && (
         <button
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition"
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200"
           aria-label="Previous image"
         >
           ❮
@@ -96,7 +96,7 @@ function ImageSlider({ images, name, imageBase = '' }: ImageSliderProps) {
       {images.length > 1 && (
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition"
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200"
           aria-label="Next image"
         >
           ❯
@@ -105,13 +105,13 @@ function ImageSlider({ images, name, imageBase = '' }: ImageSliderProps) {
 
       {/* Dots Navigation */}
       {images.length > 1 && (
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 bg-black/20 px-2.5 py-2 rounded-full">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={(e) => handleDotClick(index, e)}
-              className={`w-2 h-2 rounded-full transition ${
-                index === currentIndex ? 'bg-white' : 'bg-white/50'
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                index === currentIndex ? 'bg-white w-2.5' : 'bg-white/50'
               }`}
               aria-label={`Go to image ${index + 1}`}
             />
