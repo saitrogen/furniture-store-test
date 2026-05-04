@@ -4,255 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin — Furniture Store</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #f5f0eb; color: #2d2d2d; }
-    header { background: #3b2a1a; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 1.4rem; }
-    #loginSection { text-align: center; padding: 5rem 2rem; }
-    #loginSection h2 { margin-bottom: 1rem; }
-    .btn { padding: 0.7rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; font-weight: bold; }
-    .btn-dark { background: #3b2a1a; color: white; }
-    .btn-green { background: #25D366; color: white; }
-    .btn-red { background: #e74c3c; color: white; font-size: 0.85rem; padding: 0.4rem 0.8rem; }
-    .btn-blue { background: #2980b9; color: white; }
-    #adminSection { display: none; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-    .form-card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-    .form-card h2 { margin-bottom: 1rem; font-size: 1.2rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-    .form-row.full { grid-template-columns: 1fr; }
-    label { font-size: 0.85rem; color: #666; display: block; margin-bottom: 4px; }
-    input, textarea, select { width: 100%; padding: 0.6rem 0.8rem; border: 1.5px solid #ddd; border-radius: 8px; font-size: 0.95rem; }
-    textarea { resize: vertical; height: 80px; }
-    .product-list { display: grid; gap: 1rem; }
-    .product-item { background: white; border-radius: 10px; padding: 1rem; display: flex; gap: 1rem; align-items: center; box-shadow: 0 1px 6px rgba(0,0,0,0.07); }
-    .product-item img { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; background: #eee; }
-    .product-info { flex: 1; }
-    .product-info h3 { font-size: 1rem; }
-    .product-info p { font-size: 0.85rem; color: #888; }
-    .status { text-align: center; padding: 0.8rem; border-radius: 8px; margin: 1rem 0; font-weight: bold; display: none; }
-    .status.success { background: #d4edda; color: #155724; display: block; }
-    .status.error { background: #f8d7da; color: #721c24; display: block; }
-    .img-preview { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    .img-preview img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
-  </style>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
 <header>
-  <h1>🛋 Furniture Admin</h1>
+  <h1>🛋 Admin</h1>
   <div id="userInfo"></div>
 </header>
 
-<div id="loginSection">
+<div id="loginSection" style="display:none">
   <h2>Admin Login</h2>
-  <p style="color:#888;margin-bottom:1.5rem">Sign in with GitHub to manage products</p>
-  <button class="btn btn-dark" onclick="loginWithGitHub()">🔐 Login with GitHub</button>
+  <p>Sign in to manage products and images</p>
+  <button class="btn btn-primary" onclick="showLogin()">🔐 Enter Token</button>
 </div>
 
 <div id="adminSection">
+
   <div id="status" class="status"></div>
 
-  <div class="form-card">
-    <h2>➕ Add New Product</h2>
+  <!-- Add / Edit Form -->
+  <div class="form-card" id="formCard">
+    <h2 id="formTitle">➕ Add New Product</h2>
+
     <div class="form-row">
-      <div><label>Product ID (slug, no spaces)</label><input id="pid" placeholder="teak-sofa-01" /></div>
-      <div><label>Name</label><input id="pname" placeholder="Teak Wood Sofa" /></div>
+      <div>
+        <label>Product ID <span style="color:#bbb;font-weight:400">(slug, no spaces — cannot change later)</span></label>
+        <input id="pid" placeholder="teak-sofa-01" />
+      </div>
+      <div>
+        <label>Product Name</label>
+        <input id="pname" placeholder="Teak Wood Sofa" />
+      </div>
     </div>
+
     <div class="form-row">
-      <div><label>Price</label><input id="pprice" placeholder="₹18,000" /></div>
-      <div><label>Category</label><input id="pcat" placeholder="Sofa" /></div>
+      <div>
+        <label>Price</label>
+        <input id="pprice" placeholder="₹18,000" />
+      </div>
+      <div>
+        <label>Category</label>
+        <input id="pcat" placeholder="Sofa" />
+      </div>
     </div>
-    <div class="form-row">
-      <div><label>WhatsApp Number (with country code)</label><input id="pwa" placeholder="919876543210" /></div>
-    </div>
-    <div class="form-row full">
-      <div><label>Description</label><textarea id="pdesc" placeholder="Short product description"></textarea></div>
-    </div>
+
     <div class="form-row full">
       <div>
-        <label>Product Images (upload multiple)</label>
-        <input type="file" id="pimages" accept="image/*" multiple onchange="previewImages(this)" />
-        <div class="img-preview" id="imgPreview"></div>
+        <label>WhatsApp Number (with country code)</label>
+        <input id="pwa" placeholder="919876543210" />
       </div>
     </div>
-    <button class="btn btn-green" onclick="addProduct()" style="margin-top:0.5rem">✅ Add Product</button>
+
+    <div class="form-row full">
+      <div>
+        <label>Description</label>
+        <textarea id="pdesc" placeholder="Short product description"></textarea>
+      </div>
+    </div>
+
+    <!-- Existing images shown only in edit mode -->
+    <div id="existingImgs"></div>
+
+    <div class="form-row full" style="margin-top:0.75rem">
+      <div>
+        <label>Add Images</label>
+        <input type="file" id="pimages" accept="image/*" multiple onchange="previewNewImages(this)" />
+        <div id="newImgPreview"></div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-success" id="submitBtn" onclick="submitForm()">✅ Add Product</button>
+      <button class="btn btn-outline" id="cancelBtn" onclick="cancelEdit()" style="display:none;background:#888;color:white">✕ Cancel Edit</button>
+    </div>
   </div>
 
+  <!-- Product List -->
   <div class="form-card">
-    <h2>📦 Existing Products</h2>
+    <h2>📦 Products</h2>
     <div class="product-list" id="productList">Loading...</div>
   </div>
+
 </div>
 
-<script>
-  const CLIENT_ID = 'Ov23liPACGgr0N6j4tix';
-  const REPO_OWNER = 'saitrogen';
-  const REPO_NAME = 'furniture-store-test';
-  const REDIRECT_URI = `https://${REPO_OWNER}.github.io/${REPO_NAME}/admin.html`;
-  const RAW_BASE = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/`;
-  const API_BASE = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents`;
-
-  let token = localStorage.getItem('gh_token');
-  let products = [];
-
-  // OAuth PKCE helpers
-  function b64url(buf) {
-    return btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=/g,'');
-  }
-  async function sha256(plain) {
-    const enc = new TextEncoder().encode(plain);
-    return await crypto.subtle.digest('SHA-256', enc);
-  }
-
-  async function loginWithGitHub() {
-    const verifier = b64url(crypto.getRandomValues(new Uint8Array(32)));
-    const challenge = b64url(await sha256(verifier));
-    sessionStorage.setItem('pkce_verifier', verifier);
-    const params = new URLSearchParams({
-      client_id: CLIENT_ID,
-      redirect_uri: REDIRECT_URI,
-      scope: 'repo',
-      response_type: 'code',
-      code_challenge: challenge,
-      code_challenge_method: 'S256'
-    });
-    window.location = `https://github.com/login/oauth/authorize?${params}`;
-  }
-
-  async function handleCallback() {
-    const code = new URLSearchParams(window.location.search).get('code');
-    if (!code) return;
-    history.replaceState({}, '', window.location.pathname);
-    // GitHub OAuth does not support pure PKCE token exchange from browser
-    // Use a free Cloudflare Worker proxy (no server needed)
-    // For testing: paste token manually
-    const t = prompt('GitHub does not allow browser-only token exchange.\nPaste your GitHub Personal Access Token (repo scope) to continue:');
-    if (t) { localStorage.setItem('gh_token', t); token = t; init(); }
-  }
-
-  async function init() {
-    if (!token) { handleCallback(); return; }
-    document.getElementById('loginSection').style.display = 'none';
-    document.getElementById('adminSection').style.display = 'block';
-    const user = await fetch('https://api.github.com/user', { headers: authHeaders() }).then(r => r.json());
-    document.getElementById('userInfo').innerHTML = `<span style="color:white">👤 ${user.login} <button class="btn btn-red" onclick="logout()">Logout</button></span>`;
-    await loadProducts();
-  }
-
-  function authHeaders() { return { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }; }
-  function logout() { localStorage.removeItem('gh_token'); location.reload(); }
-
-  async function getFileSHA(path) {
-    const res = await fetch(`${API_BASE}/${path}`, { headers: authHeaders() });
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.sha;
-  }
-
-  async function loadProducts() {
-    const res = await fetch(RAW_BASE + 'products.json?t=' + Date.now());
-    products = await res.json();
-    renderProductList();
-  }
-
-  function renderProductList() {
-    const list = document.getElementById('productList');
-    if (!products.length) { list.innerHTML = '<p style="color:#888">No products yet.</p>'; return; }
-    list.innerHTML = products.map((p, i) => `
-      <div class="product-item">
-        <img src="${p.images && p.images[0] ? RAW_BASE + p.images[0] : 'https://via.placeholder.com/70?text=?'}" />
-        <div class="product-info">
-          <h3>${p.name}</h3>
-          <p>${p.category} · ${p.price}</p>
-          <p style="font-size:0.8rem;color:#aaa">${p.id}</p>
-        </div>
-        <button class="btn btn-red" onclick="deleteProduct(${i})">🗑 Delete</button>
-      </div>
-    `).join('');
-  }
-
-  function previewImages(input) {
-    const preview = document.getElementById('imgPreview');
-    preview.innerHTML = '';
-    [...input.files].forEach(f => {
-      const reader = new FileReader();
-      reader.onload = e => { const img = document.createElement('img'); img.src = e.target.result; preview.appendChild(img); };
-      reader.readAsDataURL(f);
-    });
-  }
-
-  async function uploadImage(file, path) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = async e => {
-        const base64 = e.target.result.split(',')[1];
-        const sha = await getFileSHA(path);
-        const body = { message: `Upload image: ${path}`, content: base64 };
-        if (sha) body.sha = sha;
-        const res = await fetch(`${API_BASE}/${path}`, {
-          method: 'PUT',
-          headers: { ...authHeaders(), 'Content-Type': 'application/json' },
-          body: JSON.stringify(body)
-        });
-        res.ok ? resolve(path) : reject(await res.json());
-      };
-      reader.readAsDataURL(file);
-    });
-  }
-
-  async function saveProducts() {
-    const sha = await getFileSHA('products.json');
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(products, null, 2))));
-    const body = { message: 'Update products.json', content };
-    if (sha) body.sha = sha;
-    const res = await fetch(`${API_BASE}/products.json`, {
-      method: 'PUT',
-      headers: { ...authHeaders(), 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
-    return res.ok;
-  }
-
-  async function addProduct() {
-    const id = document.getElementById('pid').value.trim();
-    const name = document.getElementById('pname').value.trim();
-    const price = document.getElementById('pprice').value.trim();
-    const category = document.getElementById('pcat').value.trim();
-    const whatsapp = document.getElementById('pwa').value.trim();
-    const description = document.getElementById('pdesc').value.trim();
-    const files = document.getElementById('pimages').files;
-    if (!id || !name || !price) { showStatus('Please fill in ID, Name, and Price.', 'error'); return; }
-    showStatus('Uploading images...', 'success');
-    const imagePaths = [];
-    for (let i = 0; i < files.length; i++) {
-      const ext = files[i].name.split('.').pop();
-      const path = `images/${id}-${i+1}.${ext}`;
-      await uploadImage(files[i], path);
-      imagePaths.push(path);
-    }
-    products.push({ id, name, price, category, description, whatsapp, images: imagePaths });
-    showStatus('Saving product data...', 'success');
-    const ok = await saveProducts();
-    if (ok) { showStatus(`✅ Product "${name}" added successfully!`, 'success'); renderProductList(); }
-    else showStatus('❌ Failed to save product.', 'error');
-  }
-
-  async function deleteProduct(index) {
-    if (!confirm(`Delete "${products[index].name}"?`)) return;
-    products.splice(index, 1);
-    const ok = await saveProducts();
-    if (ok) { showStatus('✅ Product deleted.', 'success'); renderProductList(); }
-    else showStatus('❌ Delete failed.', 'error');
-  }
-
-  function showStatus(msg, type) {
-    const s = document.getElementById('status');
-    s.textContent = msg; s.className = `status ${type}`;
-    setTimeout(() => s.style.display = 'none', 4000);
-  }
-
-  init();
-</script>
+<script src="./config.js"></script>
+<script src="./js/github-api.js"></script>
+<script src="./js/admin.js"></script>
 </body>
 </html>
