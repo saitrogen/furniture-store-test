@@ -6,9 +6,7 @@
     "category": "Bed",
     "description": "Premium solid oak king size bed with hand-carved details and storage compartments.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/bed-1.jpg", "images/bed-2.jpg", "images/bed-3.jpg"]
   },
   {
     "id": "queen-bed-01",
@@ -17,9 +15,7 @@
     "category": "Bed",
     "description": "Modern minimalist queen bed with low profile frame and built-in storage. Perfect for contemporary spaces.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/bed-2.jpg", "images/bed-3.jpg"]
   },
   {
     "id": "single-bed-01",
@@ -28,9 +24,7 @@
     "category": "Bed",
     "description": "Sturdy steel single bed with powder coating. Ideal for hostels and student rooms.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/bed-3.jpg", "images/bed-1.jpg"]
   },
   {
     "id": "sofa-01",
@@ -39,9 +33,7 @@
     "category": "Sofa",
     "description": "Ultra-comfortable premium velvet sofa with ergonomic support and solid wood frame. Perfect for modern living.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/sofa-1.jpg", "images/sofa-2.jpg", "images/sofa-3.jpg"]
   },
   {
     "id": "sofa-02",
@@ -50,9 +42,7 @@
     "category": "Sofa",
     "description": "Large L-shaped sectional sofa with reversible cushions. Seats 5-6 people comfortably.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/sofa-2.jpg", "images/sofa-3.jpg", "images/sofa-1.jpg"]
   },
   {
     "id": "sofa-03",
@@ -61,9 +51,7 @@
     "category": "Sofa",
     "description": "Space-saving 2-seater sofa in grey linen. Great for apartments and small living rooms.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/sofa-3.jpg", "images/sofa-1.jpg"]
   },
   {
     "id": "dining-table-01",
@@ -72,9 +60,7 @@
     "category": "Table",
     "description": "6-seater dining table in solid walnut wood with hand-polished finish. Seats up to 6 people.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/table-1.jpg", "images/table-2.jpg", "images/table-3.jpg"]
   },
   {
     "id": "dining-table-02",
@@ -83,9 +69,7 @@
     "category": "Table",
     "description": "Modern 4-seater dining table with sleek glass top and chrome base. Contemporary design.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/table-2.jpg", "images/table-4.jpg", "images/table-1.jpg"]
   },
   {
     "id": "coffee-table-01",
@@ -94,9 +78,7 @@
     "category": "Table",
     "description": "Elegant coffee table with white marble top and wooden base. Perfect for any living room.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/table-3.jpg", "images/table-2.jpg"]
   },
   {
     "id": "coffee-table-02",
@@ -105,9 +87,7 @@
     "category": "Table",
     "description": "Industrial style multi-level coffee table with storage. Makes a statement piece.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/table-4.jpg", "images/table-1.jpg"]
   },
   {
     "id": "chair-01",
@@ -116,9 +96,7 @@
     "category": "Chair",
     "description": "Contemporary accent chair in mustard yellow fabric. Adds color and comfort to any room.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/chair-1.jpg", "images/chair-2.jpg", "images/chair-3.jpg"]
   },
   {
     "id": "chair-02",
@@ -127,9 +105,7 @@
     "category": "Chair",
     "description": "Premium office chair with ergonomic back support and adjustable height. Perfect for working.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/chair-2.jpg", "images/chair-4.jpg"]
   },
   {
     "id": "chair-03",
@@ -138,9 +114,7 @@
     "category": "Chair",
     "description": "Classic wooden dining chair made from solid oak. Pack of 2. Timeless design.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/chair-3.jpg", "images/chair-1.jpg"]
   },
   {
     "id": "chair-04",
@@ -149,9 +123,7 @@
     "category": "Chair",
     "description": "Comfortable rocking chair upholstered in soft fabric. Perfect for relaxation.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/chair-4.jpg", "images/chair-2.jpg"]
   },
   {
     "id": "cabinet-01",
@@ -160,9 +132,7 @@
     "category": "Cabinet",
     "description": "Spacious wooden storage cabinet with shelves and doors. Solid teak wood construction.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/cabinet-1.jpg", "images/cabinet-2.jpg", "images/cabinet-3.jpg"]
   },
   {
     "id": "cabinet-02",
@@ -171,9 +141,7 @@
     "category": "Cabinet",
     "description": "Sleek modern kitchen cabinet with soft-close doors and multiple compartments.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/cabinet-2.jpg", "images/cabinet-3.jpg"]
   },
   {
     "id": "cabinet-03",
@@ -182,9 +150,7 @@
     "category": "Cabinet",
     "description": "Space-saving shoe rack cabinet that holds 15+ pairs. Fits in any hallway.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/cabinet-3.jpg", "images/cabinet-1.jpg"]
   },
   {
     "id": "bookshelf-01",
@@ -193,9 +159,7 @@
     "category": "Shelf",
     "description": "5-tier wooden bookshelf. Sturdy construction holds up to 200kg total weight.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/shelf-1.jpg", "images/shelf-2.jpg"]
   },
   {
     "id": "bookshelf-02",
@@ -204,9 +168,7 @@
     "category": "Shelf",
     "description": "Modern display shelf with metal frame and glass shelves. Perfect for collectibles.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/shelf-2.jpg", "images/shelf-1.jpg"]
   },
   {
     "id": "desk-01",
@@ -215,9 +177,7 @@
     "category": "Desk",
     "description": "Sturdy home office desk with spacious work surface and cable management. Adjustable height.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/desk-1.jpg", "images/desk-2.jpg"]
   },
   {
     "id": "desk-02",
@@ -226,9 +186,7 @@
     "category": "Desk",
     "description": "High-performance gaming desk with RGB lighting and multiple monitor arm positions.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/desk-2.jpg", "images/desk-1.jpg"]
   },
   {
     "id": "tv-stand-01",
@@ -237,9 +195,7 @@
     "category": "Stand",
     "description": "Contemporary TV stand fits screens up to 65 inches. Storage for media devices.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/tv-stand-1.jpg", "images/tv-stand-2.jpg"]
   },
   {
     "id": "tv-stand-02",
@@ -248,9 +204,7 @@
     "category": "Stand",
     "description": "Sleek floating TV stand saves floor space. Holds up to 50kg weight.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/tv-stand-2.jpg", "images/tv-stand-1.jpg"]
   },
   {
     "id": "wardrobe-01",
@@ -259,9 +213,7 @@
     "category": "Wardrobe",
     "description": "Spacious 3-door wardrobe with mirror and compartments. Solid wood construction.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/wardrobe-1.jpg", "images/wardrobe-2.jpg"]
   },
   {
     "id": "wardrobe-02",
@@ -270,9 +222,7 @@
     "category": "Wardrobe",
     "description": "Modern sliding door wardrobe saves space. 2 doors with internal organization.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/wardrobe-2.jpg", "images/wardrobe-1.jpg"]
   },
   {
     "id": "nightstand-01",
@@ -281,9 +231,7 @@
     "category": "Nightstand",
     "description": "Simple wooden nightstand with drawer and open shelf. Fits any bedroom.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/nightstand-1.jpg", "images/nightstand-2.jpg"]
   },
   {
     "id": "nightstand-02",
@@ -292,9 +240,7 @@
     "category": "Nightstand",
     "description": "Contemporary nightstand with tempered glass shelves and metal frame.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/nightstand-2.jpg", "images/nightstand-1.jpg"]
   },
   {
     "id": "mirror-01",
@@ -303,9 +249,7 @@
     "category": "Mirror",
     "description": "Full-body standing mirror with wooden frame. Perfect for dressing rooms.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/mirror-1.jpg", "images/mirror-2.jpg"]
   },
   {
     "id": "mirror-02",
@@ -314,9 +258,7 @@
     "category": "Mirror",
     "description": "Decorative wall mirror with ornate frame. Adds elegance to any wall.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/mirror-2.jpg", "images/mirror-1.jpg"]
   },
   {
     "id": "stool-01",
@@ -325,9 +267,7 @@
     "category": "Stool",
     "description": "Adjustable bar height stool with footrest. Upholstered in durable fabric.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/stool-1.jpg", "images/stool-2.jpg"]
   },
   {
     "id": "stool-02",
@@ -336,8 +276,6 @@
     "category": "Stool",
     "description": "Classic wooden dining stool. Set of 2. Goes well with any table.",
     "whatsapp": "919876543210",
-    "images": [
-      "images/king-bed-02-1.jpg"
-    ]
+    "images": ["images/stool-2.jpg", "images/stool-1.jpg"]
   }
 ]
